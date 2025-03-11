@@ -202,4 +202,4 @@ class TestTodo(TodoTest):
 
     def test_delete_item_not_found(self):
         response = self.client.delete('/api/v1/todos/1')
-        self.assertEqual(response.status_code, 200)
+        self.assertEqual(response.status_code, 404)
